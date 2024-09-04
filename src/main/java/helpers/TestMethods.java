@@ -2,7 +2,6 @@ package helpers;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
