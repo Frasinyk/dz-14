@@ -7,10 +7,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
 import helpers.Basic;
-
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class MyTest {
@@ -25,21 +22,21 @@ public class MyTest {
         methods = new TestMethods(driver);
     }
 
-//    @AfterTest
-//    public void closeChrome(){
-//        driver.close();
-//    }
+    @AfterTest
+    public void closeChrome(){
+        driver.close();
+    }
 
-//    @Test(priority = 1)
-//    public void clickOnButtons() {
-//        driver.get("https://demoqa.com/elements");
-//        By button = By.id("item-4");
-//        By buttonClickMe = By.xpath("//*[text() = 'Click Me']");
-//        By message = By.id("dynamicClickMessage");
-//        driver.findElement(button).click();
-//        driver.findElement(buttonClickMe).click();
-//        System.out.println(driver.findElement(message).getText());
-//    }
+    @Test(priority = 1)
+    public void clickOnButtons() {
+        driver.get("https://demoqa.com/elements");
+        By button = By.id("item-4");
+        By buttonClickMe = By.xpath("//*[text() = 'Click Me']");
+        By message = By.id("dynamicClickMessage");
+        driver.findElement(button).click();
+        driver.findElement(buttonClickMe).click();
+        System.out.println(driver.findElement(message).getText());
+    }
 
     @Test(priority = 2)
     public void fillForm(){
@@ -60,11 +57,5 @@ public class MyTest {
                 .changeForm(create).checkText(create)
                 .clickOnEdit()
                 .changeForm(edit);
-
-
-
-
-
-
     }
 }
